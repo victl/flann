@@ -141,7 +141,7 @@ SMALL_POLICY(bool);
 
 /// This function will return a different policy for each type.
 template<typename T>
-base_any_policy* get_policy()
+static base_any_policy* get_policy()
 {
     static typename choose_policy<T>::type policy;
     return &policy;
